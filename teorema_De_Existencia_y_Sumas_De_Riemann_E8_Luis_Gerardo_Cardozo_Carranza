@@ -1,0 +1,48 @@
+% Octave Script
+% Title			:1.5 Teorema de Existencia
+% Description		:Script para graficar el ejericio 8 de la actividad 1.5
+% Author		:Luis Gerardo Cardozo Carranza (Gerard_CRS) luiscardozo161002@gmail.com
+% Date			:20210504
+% sion		        :1
+% Usage			:octave> /path/Teorema_de_Existencia_Actividad_1.5_Luis Gerardo Cardozo Carranza_3202
+% Notes			:Requiere aplicacion octave usar en consola preferentemente.
+
+%Actividad_Ejercicio 8 f(x)=[x],[0,10]
+%limpia la pantalla y las variables.
+clc, clear
+%define los intervalos y el numero de rectangulos.
+a = 0;
+b = 10;
+n =  100;
+%determina la longitud de la base o el incremento de x.
+base = (b-a)/n;
+%definicion de la funcion.
+x =a:base:(b-base);
+%y esta representada por la variable altura
+altura=((x));
+%calcula el valor de cada uno de los rectangulos.
+area = base*altura;
+%estable    la    linea   que   forma  la funcion
+x2 = linspace(0,10,100);
+y2 = ((x));
+%inicio del  intervalo, fin del intervalo, numero 
+%de rectangulos.
+xa = linspace(0,10,100);
+yab = ((x));
+
+%dibuja una  grafica de barras una a lado de otra 
+%sin espacios
+g = bar(xa,yab,'histc');
+
+%permite continuar  graficando  despues de que ya 
+%exista un grafica trazada
+hold on
+
+%Grafica la funcion
+plot(x2,y2);
+
+%Asigna un nombre a la grafica 
+title("Ejericicio 8 f(x)=[x]");
+
+%ajusta la grafica a los datos.
+axis tight
